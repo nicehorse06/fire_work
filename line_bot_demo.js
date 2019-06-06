@@ -56,4 +56,5 @@ let fire_num_in_range = (this_list, this_num) => {
 	return {}
 }
 
+// process.argv為參數列表，[0]為檔案名稱，[1]為檔案位置，[2]為第一個參數
 console.log(line_bot(process.argv[2]))

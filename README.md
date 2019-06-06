@@ -1,4 +1,4 @@
-#火焰大挑戰
+# 火焰大挑戰
 
 ## 把csv檔案轉成json檔案，產生`fire_data.json`
 * 命令為 `node index.js [參考原始檔] [輸入的檔案]`

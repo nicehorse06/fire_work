@@ -1,9 +1,11 @@
 #火焰大挑戰
 
 ## 把csv檔案轉成json檔案，產生`fire_data.json`
-```
-node index.js
-```
+* 命令為 `node index.js [參考原始檔] [輸入的檔案]`
+* [參考原始檔] [輸入的檔案] 如果沒有填入，會有預設值`raw_fire_data.txt`和`fire_data.json`
+	* 在沒有填入檔案的情況下，命令為`node index.js`
+* 有填入的命令為 `node index.js input.txt output.json`
+
 ## 模擬line機器人實作
 * 如果輸入火焰代號會去`fire_data.json`比對資料
 * 命令為 `node line_bot_demo.js [輸入的訊息]`，以下範例：
@@ -17,6 +19,8 @@ node index.js
 	* 100 為年號
 	* B為檢驗機構代碼
 	* 000097160為號碼
+* 測試資料 'test_data/test.txt' 
+* 可能的錯誤資料 'test_data/illegal.txt'
 
 ### 程式轉完的資料結構為
 

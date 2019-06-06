@@ -10,7 +10,7 @@ let data_index = {
 let line_bot = (message) => {
 	let return_message = ''
 
-	// 如果形式為 [數字]-[英文]-[數字] 的內容
+	// 如果形式為 [數字]-[英文]-[數字] 的內容的regex
 	let fire_code_pattern = /^[0-9]+-[A-Za-z]-[0-9]+$/
 
 	if(fire_code_pattern.test(message)){

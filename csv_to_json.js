@@ -47,8 +47,7 @@ let csv_to_json = (raw_data) => {
 		let this_max_num_list = this_data_list[data_index.max].split('-')
 		let this_min_num_list = this_data_list[data_index.min].split('-')
 
-		// 讓年的形式變成 y100, y200
-		let this_year = 'y' + this_max_num_list[data_index.year_num.year]
+		let this_year = this_max_num_list[data_index.year_num.year]
 		let this_org = this_max_num_list[data_index.year_num.org]
 
 		this_info.max = Number(this_max_num_list[data_index.year_num.num])

@@ -1,6 +1,6 @@
 # 火焰大挑戰
 
-## 把csv檔案轉成json檔案，產生`fire_data.json`
+## 把csv檔案轉成json檔案
 * 命令為 `node index.js [參考原始檔] [輸入的檔案]`
 * [參考原始檔] [輸入的檔案] 如果沒有填入，會有預設值`raw_fire_data.txt`和`fire_data.json`
 	* 在沒有填入檔案的情況下，命令為`node index.js`

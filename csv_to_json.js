@@ -33,6 +33,16 @@ let csv_to_json = (raw_data) => {
 		// 以 /t (tab)做分割，如果是用 , 做分割的csv可帶入 ','
 		let this_data_list = data_list[i].trim().split('\t')
 
+		if(!this_data_list[data_index.max] || !this_data_list[data_index.min]){
+			// 可能是原始資料從excel輸出時換行了，導致抓資料錯誤，需修改
+			// 1.如果商品名稱有""如"七星牌(鋒)九旺星300響特紅炮"可能會換行
+			// 2.有些資料同一年有四筆資料也會換行如 協利爆竹煙火股份有限公司 雷蛋(6發) "102-E-013725662 102-A-002526404" "102-E-013750000 102-A-002543077"
+			// 3.目前不支援四筆資料 todo
+			// 4.不合格資料，目前也不支援如：新昊貿易有限公司	修緣200萬禮炮	不合格	
+			console.log('can not parse this data:', this_data_list)
+			continue
+		}
+
 		// 以'-'做分隔符號
 		let this_max_num_list = this_data_list[data_index.max].split('-')
 		let this_min_num_list = this_data_list[data_index.min].split('-')
@@ -63,3 +73,5 @@ let csv_to_json = (raw_data) => {
 	}
 	return result_data
 }
+
+module.exports = csv_to_json

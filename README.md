@@ -1,5 +1,10 @@
 # 火焰大挑戰
 
+## 檔案概述
+* index.js: 讀入`txt(csv)`並寫入`json`，文字轉換的動作靠`csv_to_json.js`完成
+* csv_to_json.js: 把csv的string轉為可輸入為json的string
+* line_bot_demo.js: 依據`index.js`產生的`json`，模擬line的發文
+
 ## 把csv檔案轉成json檔案
 * 命令為 `node index.js [參考原始檔] [輸入的檔案]`
 * [參考原始檔] [輸入的檔案] 如果沒有填入，會有預設值`raw_fire_data.txt`和`fire_data.json`
